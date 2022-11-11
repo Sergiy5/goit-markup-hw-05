@@ -752,6 +752,9 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     line-height: 1.5;
     color: #FFFFFF;
 }
+
+/*BACKDROP*/
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -762,16 +765,19 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     opacity: 1;
     visibility: visible;
 
-    transition-property: opacity;
+    transition-property: opacity, visibility;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    /*transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+    /*transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
-.backdrop .is-hidden {
+.is-hidden {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+    pointer-events: none;  
+}
+.is-hidden .modal-window {
+    transform: translate(-50%, -50%) scale(0.8);
 }
 .modal-window {
     position: absolute;
@@ -781,12 +787,17 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     padding: 15px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
      0px 1px 1px rgba(0, 0, 0, 0.14),
      0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    transition-property: opacity scale;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-modal {
     position: absolute;
