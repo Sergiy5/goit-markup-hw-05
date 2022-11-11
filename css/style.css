@@ -234,7 +234,7 @@ nav {
     color: #FFFFFF;
 }
 
-.main-btn:active {
+.modal-btn:active {
     background: #188CE8;
 }
 
@@ -775,6 +775,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 }
 .modal-window {
     position: absolute;
+    display: flex;
     width: 528px;
     height: 581px;
     padding: 15px;
@@ -786,5 +787,22 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
      0px 1px 1px rgba(0, 0, 0, 0.14),
      0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    
+}
+.close-modal {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 8px;
+    top: 8px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+.close-icon {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
 }
