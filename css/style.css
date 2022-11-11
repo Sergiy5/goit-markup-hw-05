@@ -642,6 +642,7 @@ nav {
     max-height: 404px;
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
+    border: none;
 }
 
 .project-link {
@@ -660,7 +661,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     margin-top: 18px;
     margin-left: 24px;
     font-family: inherit;
-    font-size: 20px;
+    font-size: 18px;
     line-height: calc(36/18);
     letter-spacing: 0.06em;
     color: var(--primary-text-color);
@@ -675,13 +676,14 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     color: var(--second-color);
 }
 .overlay {
+    height: 294px;
     position: relative;
     overflow: hidden;
 }
 .hover-overlay {
     display: inline-block;
     position: absolute;
-    top: 0;
+    top: 1px;
     left: 0;
     width: 100%;
     height: 100%;
